@@ -165,6 +165,7 @@ section {
           box-shadow: var(--box-shadow-1);
   -webkit-transition: var(--trans);
   transition: var(--trans);
+  position: relative;
 }
 
 .controls i {
@@ -440,11 +441,15 @@ section {
 }
 
 .about-stats .progress-bars .progress-bar .progress-con .progress .html {
-  width: 80%;
+  width: 95%;
 }
 
 .about-stats .progress-bars .progress-bar .progress-con .progress .css {
-  width: 95%;
+  width: 90%;
+}
+
+.about-stats .progress-bars .progress-bar .progress-con .progress .sass {
+  width: 85%;
 }
 
 .about-stats .progress-bars .progress-bar .progress-con .progress .js {
@@ -455,11 +460,7 @@ section {
   width: 75%;
 }
 
-.about-stats .progress-bars .progress-bar .progress-con .progress .node {
-  width: 87%;
-}
-
-.about-stats .progress-bars .progress-bar .progress-con .progress .python {
+.about-stats .progress-bars .progress-bar .progress-con .progress .java {
   width: 70%;
 }
 
@@ -738,7 +739,7 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 3.5rem;
+  padding-top: 2.5rem;
 }
 
 .contact-content-con .left-contact {
@@ -887,6 +888,8 @@ section {
   color: inherit;
   font-weight: 600;
   border: 1px solid var(--color-secondary);
+  background-color: var(--color-primary);
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -978,7 +981,36 @@ section {
   z-index: -1;
 }
 
+.tooltiptext {
+  visibility: hidden;
+  width: 70px;
+  font-size: 0.7rem;
+  background-color: var(--color-secondary);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 2px 0;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  -webkit-transition: var(--trans);
+  transition: var(--trans);
+  top: 18px;
+  left: -150%;
+  -webkit-transform: translateX(10%);
+          transform: translateX(10%);
+}
+
+.control:hover .tooltiptext {
+  visibility: visible;
+  -webkit-transform: translateX(-5%);
+          transform: translateX(-5%);
+}
+
 @media screen and (max-width: 600px) {
+  .control:hover .tooltiptext {
+    visibility: hidden;
+  }
   .about-container {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;

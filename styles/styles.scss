@@ -138,6 +138,7 @@ section {
     margin: 0.7rem 0;
     box-shadow: var(--box-shadow-1);
     transition: var(--trans);
+    position: relative;  // for tooltip text added extra
   }
   i {
     font-size: 1.2rem;
@@ -331,10 +332,13 @@ section {
             transition: var(--trans);
           }
           .html {
-            width: 80%;
+            width: 95%;
           }
           .css {
-            width: 95%;
+            width: 90%;
+          }
+          .sass {
+            width: 85%;
           }
           .js {
             width: 75%;
@@ -342,10 +346,7 @@ section {
           .rjs {
             width: 75%;
           }
-          .node {
-            width: 87%;
-          }
-          .python {
+          .java {
             width: 70%;
           }
         }
@@ -558,7 +559,7 @@ section {
 
 .contact-content-con {
   display: flex;
-  padding-top: 3.5rem;
+  padding-top: 2.5rem;
   .left-contact {
     flex: 2;
     h4 {
@@ -656,6 +657,8 @@ section {
     color: inherit;
     font-weight: 600;
     border: 1px solid var(--color-secondary);
+    background-color: var(--color-primary);
+    cursor: pointer;
     display: flex;
     align-self: flex-start;
     display: flex;
@@ -729,5 +732,57 @@ section {
   }
 }
 
+.tooltiptext{
+  visibility: hidden;
+  width: 70px;
+  font-size: 0.7rem;
+  background-color: var(--color-secondary);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 2px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  transition: var(--trans);
+  top: 18px;
+  left: -150%;
+  // top: -25px;
+  // left: -120%;
+  transform: translateX(10%);
+  // transform: translateY(10%);
+}
+
+.control:hover .tooltiptext {
+  visibility: visible;
+  transform: translateX(-5%);
+  // transform: translateY(-15%);
+  
+}
+
+// .texttiptheme{
+//   visibility: hidden;
+//   width: 80px;
+//   font-size: 0.8rem;
+//   background-color: black;
+//   color: #fff;
+//   text-align: center;
+//   border-radius: 6px;
+//   padding: 2px 0;
+
+//   /* Position the tooltip */
+//   position: absolute;
+//   z-index: 1;
+//   transition: var(--trans);
+//   top: 23px;
+//   left: -160%;
+//   transform: translateX(40%);
+// }
+// .theme-btn:hover .texttiptheme {
+//   visibility: visible;
+//   transform: translateX(5%);
+  
+// }
 
 @import './media';
