@@ -22,14 +22,14 @@
   --box-shadow-1: 0 3px 15px rgba(0, 0, 0, 0.3);
 }
 
-.light-mode{
+.light-mode {
   --color-primary: #ffffff;
-  --color-secondary: #cabf1e;;
-  --color-white: #454e56;;
+  --color-secondary: #cabf1e;
+  --color-white: #454e56;
   --color-black: #000;
   --color-grey: #f8f8f8;
-  --color-grey-1: #6c7983;;
-  --color-grey-2: #6c7983;;
+  --color-grey-1: #6c7983;
+  --color-grey-2: #6c7983;
   --color-grey-3: #6c7983;
   --color-grey-4: #454e56;
   --color-grey-5: #f8f8f8;
@@ -55,8 +55,6 @@ header {
   min-height: 100vh; //earlier it was height:100vh
   color: var(--color-white);
   overflow: hidden;
-  
-  
 }
 
 // section content
@@ -138,7 +136,7 @@ section {
     margin: 0.7rem 0;
     box-shadow: var(--box-shadow-1);
     transition: var(--trans);
-    position: relative;  // for tooltip text added extra
+    position: relative; // for tooltip text added extra
   }
   i {
     font-size: 1.2rem;
@@ -175,7 +173,7 @@ section {
 .header-content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  min-height: 100vh;  //earlier it was height:100%
+  min-height: 100vh; //earlier it was height:100%
   .left-header {
     display: flex;
     align-items: center;
@@ -193,7 +191,7 @@ section {
       z-index: -1; //new line added
     }
     .image {
-      // position: absolute;  
+      // position: absolute;
       border-radius: var(--br-sm-2);
       height: 90%;
       width: 68%;
@@ -732,7 +730,7 @@ section {
   }
 }
 
-.tooltiptext{
+.tooltiptext {
   visibility: hidden;
   width: 70px;
   font-size: 0.7rem;
@@ -758,7 +756,6 @@ section {
   visibility: visible;
   transform: translateX(-5%);
   // transform: translateY(-15%);
-  
 }
 
 // .texttiptheme{
@@ -782,7 +779,7 @@ section {
 // .theme-btn:hover .texttiptheme {
 //   visibility: visible;
 //   transform: translateX(5%);
-  
+
 // }
 
-@import './media';
+@import "./media";
